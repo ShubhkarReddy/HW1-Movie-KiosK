@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Jz_ewbBtEbkdxQvpdhZM">
+    <mxGraphModel dx="1155" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_customer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=12;spacing=6;" value="Customer&#xa;--------------------&#xa;- customerId&#xa;- name" vertex="1">
+          <mxGeometry height="100" width="170" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_movie" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=12;spacing=6;" value="Movie&#xa;--------------------&#xa;- title&#xa;- genre" vertex="1">
+          <mxGeometry height="100" width="170" x="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_showtime" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=12;spacing=6;" value="Showtime&#xa;--------------------&#xa;- showtimeId&#xa;- startTime" vertex="1">
+          <mxGeometry height="100" width="170" x="640" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_seat" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=12;spacing=6;" value="Seat&#xa;--------------------&#xa;- seatNumber&#xa;- isSold" vertex="1">
+          <mxGeometry height="100" width="170" x="640" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ticket" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=12;spacing=6;" value="Ticket&#xa;--------------------&#xa;- ticketId&#xa;- price" vertex="1">
+          <mxGeometry height="100" width="170" x="340" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="c_payment" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=12;spacing=6;" value="Payment&#xa;--------------------&#xa;- paymentId&#xa;- amount&#xa;- status" vertex="1">
+          <mxGeometry height="100" width="170" x="40" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="c_movie" style="endArrow=open;html=1;startArrow=none;fontSize=11;" target="c_showtime" value="has">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1lbl" parent="1" style="text;html=1;fontSize=10;align=center;" value="1                0..*" vertex="1">
+          <mxGeometry height="20" width="80" x="540" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="c_showtime" style="endArrow=open;html=1;startArrow=none;fontSize=11;" target="c_seat" value="has">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2lbl" parent="1" style="text;html=1;fontSize=10;align=center;" value="1                0..*" vertex="1">
+          <mxGeometry height="20" width="80" x="770" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="c_customer" style="endArrow=open;html=1;startArrow=none;fontSize=11;" target="c_ticket" value="purchases">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3lbl" parent="1" style="text;html=1;fontSize=10;align=center;" value="1                0..*" vertex="1">
+          <mxGeometry height="20" width="80" x="220" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="c_ticket" style="endArrow=open;html=1;startArrow=none;fontSize=11;" target="c_seat" value="for">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4lbl" parent="1" style="text;html=1;fontSize=10;align=center;" value="1                1" vertex="1">
+          <mxGeometry height="20" width="80" x="540" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="c_ticket" style="endArrow=open;html=1;startArrow=none;fontSize=11;" target="c_payment" value="paid by">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5lbl" parent="1" style="text;html=1;fontSize=10;align=center;" value="1                1" vertex="1">
+          <mxGeometry height="20" width="80" x="220" y="300" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
